@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 
-	// 各閉じるボタンをクリックしたときの処理（アニメーション付き）
+	// 閉じるボタンをクリックしたときの処理（アニメーション付き）
 	closeBtns.forEach(btn => {
 		btn.addEventListener("click", function() {
 			const modal = btn.closest(".modal");
@@ -47,7 +47,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		modal.addEventListener("click", function(e) {
 			// クリックされた要素がモーダルそのものであれば閉じる
 			if (e.target === modal) {
-				modal.style.display = "none";
+				const content = modal.querySelector(".modal-content");
+				content.classList.add("animate__animated", "animate__fadeOutDown");
+			
+				content.addEventListener("animationend", () => {
+					modal.style.display = "none";
+					content.classList.remove("animate__animated", "animate__fadeOutDown");
+				}, { once: true });
 			}
 		});
 	});

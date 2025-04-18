@@ -4,6 +4,8 @@
 	２．モーダルウィンドウへのリベンジマッチ
 	３．ミニマルデザイン
 	４．デザインの4原則の順守 
+	
+	デザインは見やすいようにした
 ===========================================-->
 
 <!DOCTYPE html>
@@ -12,23 +14,79 @@
 <meta charset="UTF-8">
 <!--font-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..
+900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shippori+Mincho&display=swap" rel="stylesheet">
+<!--css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="css/style.css">
+<!--js-->
+<script src="js/script.js" defer></script>
 
 
-
-<title>自己紹介サイト　キム</title>
+<title>自己紹介サイト-kim</title>
 </head>
 <body>
 	<!--				tite section				-->
-	<section id = "title-banner">
-		<h1>SELF INTRODUCTION</h1>
+	<section class="title-section">
+	  <div class="banner-container">
+	    <img src="img/title-banner.png" alt="background" class="banner-img">
+	    <h1 class="title">SELF INTRODUCTION</h1>
+	  </div>
 	</section>
+
 	
 	<!--				header section 名前/プロフィール/好きなもの・趣味				-->
-	
+	<header class="info-header">
+	  <nav>
+	    <ul class="info-list">
+	      <li><button class="info-btn" data-target="name">Name</button></li>
+	      <li><button class="info-btn" data-target="profile">Profile</button></li>
+	      <li><button class="info-btn" data-target="favourite">Favourite Things</button></li>
+	    </ul>
+	  </nav>
+	</header>
 	
 	<!--				modal window area				-->
-
+	
+	<!-- モーダルウィンドウ		name -->
+	<div class="modal" id="modal-name">
+		<div class="modal-content">
+			<span class="modal-close" data-close>&times;</span>
+			<h2>NAME</h2>
+			<h3>金 貞潤  /  キム ジョンユン</h3>
+		</div>
+	</div>
+	
+	<!-- モーダルウィンドウ		profile -->
+	<div class="modal" id="modal-profile">
+		<div class="modal-content">
+			<span class="modal-close" data-close>&times;</span>
+			<h2>Profile</h2><br>
+			<p><img src="img/顔写真.jpg" width="240" height="360"></p>
+			<dl class="private-info-list">
+			  <div><dt>年齢</dt><dd>24</dd></div>
+			  <div><dt>出身</dt><dd>韓国</dd></div>
+			  <div><dt>キャリア</dt><dd>a-force 1年目</dd></div>
+			  <div><dt>血液型</dt><dd>A</dd></div>
+			  <div><dt>MBTI</dt><dd>ENTJ（指揮官型）</dd></div>
+			</dl>
+		</div>
+	</div>
+	<!-- モーダルウィンドウ		favourite -->
+	<div class="modal" id="modal-favourite">
+		<div class="modal-content">
+			<span class="modal-close" data-close>&times;</span>
+			<h2>Favourite</h2>
+			<dl class="private-info-list">
+				<div><dt>趣味</dt><dd>ジム</dd><dd>食べ巡り</dd></div>
+				<div><dt>食べ物</dt><dd>ピザ</dd><dd>とんかつ</dd></div>
+				<div><dt>アニメ</dt><dd>ワンピース、呪術廻戦</dd></div>
+				<div><dt>最近の興味</dt><dd>株式、NISA、国際政治</dd></div></dl>
+				<h2>よりも皆さんが好きです。</h2>
+		</div>
+	</div>
+	
+	
 </body>
 </html>

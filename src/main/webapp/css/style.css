@@ -7,18 +7,19 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	font-size: 1rem;
+/*	font-size: 1rem;*/
 	font-family: "Playfair Display", serif;
 	font-optical-sizing: auto;
+	background-color: aliceblue;
 }
 
 /*==========================================
 						タイトル　・　バナーイメージ
 ===========================================*/
 .title-section {
-	background-color: white;
 	height: 50vh;
 	text-align: center;
+	background-color: aliceblue;
 }
 
 .title {
@@ -27,6 +28,7 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 3rem;
+	font-weight: bold;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 	color: antiquewhite;
 }
@@ -36,7 +38,6 @@ body {
 	width: 100%;
 	max-width: 120rem;
 	height: 18rem;
-	margin: 15vh auto 1rem;
 }
 
 .banner-img {
@@ -79,7 +80,7 @@ body {
 }
 
 /*======================================
-				
+			モーダルの中の個人情報表示スタイル	
 =======================================*/
 
 .private-info-list {

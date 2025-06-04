@@ -58,7 +58,7 @@ body {
 	list-style: none;
 	display: flex;
 	justify-content: center;
-	gap: 16rem;
+	gap: 12rem;
 	margin: 0;
 }
 
@@ -153,11 +153,9 @@ body {
 	max-width: 600px;
 	width: 90%;
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-
 	/* 左寄せ */
 	text-align: left;
 	position: relative;
-	font-family: "Noto Sans JP", sans-serif;
 }
 
 /* モーダルのタイトル */

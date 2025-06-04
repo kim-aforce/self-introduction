@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			const target = btn.dataset.target;
 			const modal = document.getElementById("modal-" + target);
 			const content = modal.querySelector(".modal-content");
-
 			// モーダルを表示
 			modal.style.display = "flex";
+			
 			// アニメーションを追加（fadeInUp）
 			content.classList.add("animate__animated", "animate__fadeInUp");
 
@@ -24,7 +24,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			}, { once: true });
 		});
 	});
-
+	
+	//2025/06/04 Git 復習
+	
+	// 各閉じるボタンをクリックしたときの処理（アニメーション付き）
 	// 閉じるボタンをクリックしたときの処理（アニメーション付き）
 	closeBtns.forEach(btn => {
 		btn.addEventListener("click", function() {
@@ -47,6 +50,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		modal.addEventListener("click", function(e) {
 			// クリックされた要素がモーダルそのものであれば閉じる
 			if (e.target === modal) {
+
+				modal.style.display = "none";
+				// アニメーションを追加
+				content.classList.add("animate__animated", "animate__fadeOutDown");
+
+				// アニメーション終了後に非表示＆クラス削除
+
 				const content = modal.querySelector(".modal-content");
 				content.classList.add("animate__animated", "animate__fadeOutDown");
 			

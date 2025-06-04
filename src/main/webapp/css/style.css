@@ -51,7 +51,7 @@ body {
 ===========================================*/
 .info-header {
 	text-align: center;
-	padding-top: 0.5rem 1rem;
+	padding: 0.5rem 1rem;
 }
 
 .info-list {
@@ -170,8 +170,11 @@ body {
 	font-size: 1.1rem;
 	line-height: 1.8;
 	margin-bottom: 0.5rem;
-}
+  }
 .modal-content img{
+	width: 100%;
+	max-width: 240px;
+	height: auto;
 	display: block;
 	margin: 0 auto;
 	border-radius: 8px;
